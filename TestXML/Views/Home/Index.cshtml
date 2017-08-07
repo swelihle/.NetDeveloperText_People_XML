@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TestXML.Business.ViewModel.PersonModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3></h3>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@{ 
+    foreach(var person in Model)
+    {
+        @Html.Partial("_DetailsList", person)
+    }
+}
